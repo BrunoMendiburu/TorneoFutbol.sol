@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.14;
 
-contract TorneoFutbol {
+contract LigaFutbol {
     mapping(string => string) jugadores__equipo;
     mapping(string => uint256) puntos__equipo;
     string[] private _jugadores;
@@ -14,7 +14,7 @@ function addEquipo(string memory _equipo) public {
 }
 
 function addJugador (string memory _equipo, string memory _jugador) public {
-    jugadores__equipo[_equipo] = ;
+    jugadores__equipo[_equipo] = _jugador; 
 }
 
 function addPuntos(string memory _equipo, uint256 _puntos) public {
@@ -28,3 +28,4 @@ function getPuntos(string memory _equipo) public view returns (uint256) {
 function getJugadores(string memory _equipo) public view returns (string[]) {
     return jugadores__equipo[_equipo];
 }
+
